@@ -1,0 +1,66 @@
+using System;
+
+namespace SwitchStatement
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+
+//Console.WriteLine("What movie should you watch? \nWrite down a genre and click enter.");
+
+
+Console.WriteLine("\n\nWhat movie do ya wana see? \n\nWrite down your choice of genre and click Enter. \n\n");
+
+Start:
+string genre = Console.ReadLine();
+
+switch (genre.ToLower())
+{
+  case "drama":
+    Console.WriteLine("Citizen Kane");
+    break;
+  case "comedy":
+    Console.WriteLine("Duck Soup");
+  break;
+  case "adventure":
+    Console.WriteLine("King Kong");
+  break;
+  case "horror":
+    Console.WriteLine("Psycho");
+  break;
+  case "science fiction": case "sci fi": case "sci-fi":
+    Console.WriteLine("2001: Space Odyssey");
+  break;
+  default:
+    Console.WriteLine("\nErm... try another genre?");
+    goto Start;
+  break;
+}
+
+    Console.WriteLine("\nWould you like to try again? A simple yes or no will suffice...");
+    string answer = Console.ReadLine();
+
+string answerLower = answer.ToLower();
+
+if (answerLower == "yes")
+{  Console.WriteLine("\nOk! Pick another genre:\n");
+
+goto Start;
+
+}
+
+
+
+else 
+  {
+    Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z");
+  }
+
+
+}
+
+
+    }
+  }
+
