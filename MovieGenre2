@@ -1,0 +1,93 @@
+using System;
+
+namespace SwitchStatement
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+
+//Console.WriteLine("What movie should you watch? \nWrite down a genre and click enter.");
+
+
+Console.WriteLine("\n\nWhat movie do ya wana see? \n\nWrite down your choice of genre and click Enter. \n\n");
+
+Start:
+SecondTime:
+string genre = Console.ReadLine();
+
+switch (genre.ToLower())
+{
+  case "drama":
+    Console.WriteLine("\nCitizen Kane");
+    break;
+  case "comedy":
+    Console.WriteLine("\nAirplane!");
+  break;
+  case "adventure":
+    Console.WriteLine("\nI'd recommend some Indiana Jones");
+  break;
+  case "horror":
+    Console.WriteLine("\nThe Ritual");
+  break;
+  case "science fiction": case "sci fi": case "sci-fi":
+    Console.WriteLine("\n2001: Space Odyssey");
+  break;
+  case "fantasy":
+    Console.WriteLine("\nIt's gotta be Lord of the Rings, bro");
+  break;
+  case "romcom": case "rom-com": case "rom com":
+    Console.WriteLine("\nWhen Harry met Sally, it still stands up");
+  break;
+  case "action":
+    Console.WriteLine("\nSo many choices... RoboCop");
+  break;
+  default:
+    Console.WriteLine("\nErm... try another genre?");
+    goto Start;
+break;
+}
+
+    Console.WriteLine("\n\nWould you like to try again? A simple yes or no will suffice...");
+    string answer = Console.ReadLine();
+
+    string answer1 = answer.ToLower();
+
+if (answer1 == "yes")
+{  Console.WriteLine("\nOk! Pick another genre:\n");
+goto SecondTime;
+}
+else if (answer1 == "no")
+{  Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z");
+}
+else 
+{  Console.WriteLine("\nI didn't quite catch that. But I'm tired now. Thanks for the wild ride. \n\n I'm off to computer sleep \n\n z z z z Z Z Z");
+}
+
+
+/*
+case "yes": case "yup": case "yarp": case "yes please": case "yeh": case "yuh": case "yep": case "y": case "yu":
+  Console.WriteLine("\nOk! Pick another genre:\n");
+  goto Start;
+break;
+
+case "no": case "nuh": case "nope": case "no thanks":
+  Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z");
+  break;
+
+  default:
+  Console.WriteLine("\nI didn't quite catch that. But I'm tired now. Thanks for the wild ride. \n\n I'm off to computer sleep \n\n z z z z Z Z Z");
+  break;
+}
+
+*/
+
+  }
+
+
+}
+
+
+    }
+  
+
