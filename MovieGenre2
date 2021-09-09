@@ -36,7 +36,7 @@ switch (genre.ToLower())
   case "fantasy":
     Console.WriteLine("\nIt's gotta be Lord of the Rings, bro");
   break;
-  case "romcom": case "rom-com": case "rom com":
+  case "romcom": case "rom-com": case "rom com": case "romantic comedy": 
     Console.WriteLine("\nWhen Harry met Sally, it still stands up");
   break;
   case "action":
@@ -49,27 +49,43 @@ break;
 }
 
     Console.WriteLine("\n\nWould you like to try again? A simple yes or no will suffice...");
+  
+Here:
     string answer = Console.ReadLine();
 
-    string answer1 = answer.ToLower();
-
-if (answer1 == "yes")
-{  Console.WriteLine("\nOk! Pick another genre:\n");
-goto SecondTime;
-}
-else if (answer1 == "no")
-{  Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z");
-}
-else 
-{  Console.WriteLine("\nI didn't quite catch that. But I'm tired now. Thanks for the wild ride. \n\n I'm off to computer sleep \n\n z z z z Z Z Z");
-}
-
-
-/*
-case "yes": case "yup": case "yarp": case "yes please": case "yeh": case "yuh": case "yep": case "y": case "yu":
+   
+switch (answer.ToLower())
+{
+  case "yes": case "yeh": case "yup": case "yarp": case "yes please": case "yeh please": case "go on then": case "ok": case "okay": case "yuh":
   Console.WriteLine("\nOk! Pick another genre:\n");
-  goto Start;
-break;
+goto SecondTime;
+  break;
+  
+  case "no": case "nope": case "narp": case "no thanks": case "no thank you": case "nuh": case "can't be arsed": case "fuck no": case "I'm done":
+  Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z  \n\n");
+  break;
+  
+  default:
+  Console.WriteLine("\nI didn't quite catch that. Maybe try and type it in a different way?");
+  goto Here;
+  break;
+}
+
+
+
+
+
+
+  }
+
+
+}
+
+
+    }
+  
+
+
 
 case "no": case "nuh": case "nope": case "no thanks":
   Console.WriteLine("\n \nOk then! Bye now. \nI'm off to computer sleep.   \n\n z z z z z");
